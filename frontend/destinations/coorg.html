@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Coorg - TravelingBrid</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background:
+        linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+        url('https://www.toptal.com/designers/subtlepatterns/patterns/doodles.png');
+      background-size: 300px;
+      background-attachment: fixed;
+    }
+    nav {
+      background: #0077b6;
+      display: flex;
+      gap: 2rem;
+      padding: 1rem;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a.active {
+      background: white;
+      color: #0077b6;
+      padding: 0.3rem 0.7rem;
+      border-radius: 5px;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    video, iframe, img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .booking-form input, .booking-form button {
+      display: block;
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.7rem;
+      font-size: 1rem;
+    }
+    .booking-form button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .booking-form button:hover {
+      background: #005f8e;
+    }
+  </style>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="../js/script.js"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="../destinations.html" class="active">Destinations</a>
+  <a href="../map.html">Map</a>
+  <a href="../planner.html">Planner</a>
+  <a href="../dashboard.html">Dashboard</a>
+  <a href="../signup.html">Login / Signup</a>
+</nav>
+
+<main>
+  <h1>☕ Coorg – Coffee Hills of Karnataka</h1>
+  <img src="../media/images/coorg.jpg" alt="Coorg Hills View" />
+
+  <section>
+    <h2>🌟 Best Places to Visit</h2>
+    <ul>
+      <li>☕ Coffee Plantations – walk through aromatic estates</li>
+      <li>💦 Abbey Falls – waterfalls in dense forest</li>
+      <li>🕍 Madikeri Fort – historic view & museum</li>
+      <li>🕉️ Talacauvery – river source at Brahmagiri Hill</li>
+      <li>🏞️ Raja’s Seat – valley view at sunrise</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🎯 Must-Do Experiences</h2>
+    <ul>
+      <li>🌄 Stay in a plantation homestay</li>
+      <li>☕ Sip fresh Coorgi filter coffee</li>
+      <li>🧭 Trek to Tadiandamol – highest peak in Coorg</li>
+      <li>📸 Explore Dubare Elephant Camp</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🗓️ Best Time to Visit</h2>
+    <p>October to March (cool & fresh) | July–Sept for monsoon waterfalls 🌧️</p>
+  </section>
+
+  <section>
+    <h2>🏨 Where to Stay</h2>
+    <ul>
+      <li>🏡 Evolve Back Coorg – luxury amidst coffee estates</li>
+      <li>🌿 The Tamara – scenic premium retreat</li>
+      <li>🛌 Heritage plantation homestays in Madikeri</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🍽️ Food to Relish</h2>
+    <ul>
+      <li>🍛 Pandi Curry (spicy pork – Coorgi special)</li>
+      <li>🌾 Akki Roti (rice roti with chutneys)</li>
+      <li>🥘 Bamboo Shoot Curry</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>💰 Budget Range</h2>
+    <p>₹8,500 – ₹13,000 per person (2N/3D with homestay & experiences)</p>
+  </section>
+
+  <section>
+    <h2>🗺️ Map of Coorg</h2>
+    <iframe src="https://www.google.com/maps?q=coorg+karnataka&output=embed" height="300"></iframe>
+  </section>
+
+  <section>
+    <h2>🎥 Watch Coorg in Monsoon</h2>
+    <video controls>
+      <source src="../media/videos/coorg.mp4" type="video/mp4" />
+    </video>
+  </section>
+
+  <!-- Hotels & Packages Section -->
+  <section class="hotels-packages">
+    <h2>🏨 Recommended Hotels in Coorg</h2>
+    <div class="hotel-cards">
+      <div class="hotel-card">
+        <img src="../media/images/hotel_plantationview.jpg" alt="Plantation View Stay">
+        <h3>Plantation View Stay</h3>
+        <p>Starting at ₹2,400/night</p>
+        <button onclick="bookHotel('Plantation View Stay')">Book Room</button>
+      </div>
+      <div class="hotel-card">
+        <img src="../media/images/hotel_rainforestretreat.jpg" alt="Rainforest Retreat">
+        <h3>Rainforest Retreat</h3>
+        <p>Starting at ₹2,000/night</p>
+        <button onclick="bookHotel('Rainforest Retreat')">Book Room</button>
+      </div>
+    </div>
+
+    <h2>📦 Popular Packages</h2>
+    <div class="package-cards">
+      <div class="package-card">
+        <h3>3D/2N Nature Escape</h3>
+        <ul>
+          <li>✔️ Coffee estate stay</li>
+          <li>✔️ Trekking + River rafting</li>
+          <li>✔️ Breakfast & Cab tour</li>
+        </ul>
+        <p>₹5,400 per person</p>
+        <button onclick="bookPackage('Nature Escape')">Book Package</button>
+      </div>
+      <div class="package-card">
+        <h3>5D/4N Coorg Discovery</h3>
+        <ul>
+          <li>✔️ Luxury plantation resort</li>
+          <li>✔️ Abbey Falls, Dubare, Raja Seat</li>
+          <li>✔️ All meals + guide</li>
+        </ul>
+        <p>₹10,800 per person</p>
+        <button onclick="bookPackage('Coorg Discovery')">Book Package</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function bookHotel(name) {
+      alert(`✅ Hotel Booked: ${name}\nThank you for choosing TravelingBird!`);
+    }
+
+    function bookPackage(name) {
+      alert(`✅ Package Booked: ${name}\nHappy exploring with TravelingBird!`);
+    }
+  </script>
+
+  <section class="booking-form">
+    <h2>📝 Book This Trip</h2>
+    <form onsubmit="bookTrip(event)">
+      <input type="hidden" id="destination" value="Coorg" />
+      <label>Travel Date:</label>
+      <input type="date" id="date" required />
+      <label>Number of People:</label>
+      <input type="number" id="numPeople" min="1" required />
+      <button type="submit">Pay & Book</button>
+    </form>
+  </section>
+</main>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

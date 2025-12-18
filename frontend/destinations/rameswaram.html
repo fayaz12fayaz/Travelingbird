@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rameswaram - TravelingBrid</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background:
+        linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
+        url('https://www.toptal.com/designers/subtlepatterns/patterns/doodles.png');
+      background-size: 300px;
+      background-attachment: fixed;
+    }
+    nav {
+      background: #0077b6;
+      display: flex;
+      gap: 2rem;
+      padding: 1rem;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a.active {
+      background: white;
+      color: #0077b6;
+      padding: 0.3rem 0.7rem;
+      border-radius: 5px;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    video, iframe, img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .booking-form input, .booking-form button {
+      display: block;
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.7rem;
+      font-size: 1rem;
+    }
+    .booking-form button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .booking-form button:hover {
+      background: #005f8e;
+    }
+  </style>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="../js/script.js"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="../destinations.html" class="active">Destinations</a>
+  <a href="../map.html">Map</a>
+  <a href="../planner.html">Planner</a>
+  <a href="../dashboard.html">Dashboard</a>
+  <a href="../signup.html">Login / Signup</a>
+</nav>
+
+<main>
+  <h1>🐬 Rameswaram – The Sacred Island Gateway</h1>
+  <img src="../media/images/rameswaram.jpg" alt="Rameswaram Bridge & Temple" />
+
+  <section>
+    <h2>🌟 Major Attractions</h2>
+    <ul>
+      <li>🛕 Ramanathaswamy Temple – one of the 12 Jyotirlingas</li>
+      <li>🌉 Pamban Sea Bridge – iconic railway bridge over ocean</li>
+      <li>🌊 Dhanushkodi – ghost town with crashing waves</li>
+      <li>🏝️ APJ Abdul Kalam Memorial – tribute to India’s Missile Man</li>
+      <li>🛶 Ariyaman Beach – for peaceful sunset strolls</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🎯 Unique Experiences</h2>
+    <ul>
+      <li>🙏 22 sacred wells (theerthams) ritual bath inside temple</li>
+      <li>🐠 Glass boat ride at Pamban Beach</li>
+      <li>📸 Sea-facing rail journey on Pamban Bridge</li>
+      <li>🎣 Fishing village walk in Dhanushkodi</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🗓️ Best Time to Visit</h2>
+    <p>October to April – cool, breezy and temple festivals</p>
+  </section>
+
+  <section>
+    <h2>🏨 Where to Stay</h2>
+    <ul>
+      <li>🌅 Hyatt Place Rameswaram – modern sea view stay</li>
+      <li>🏨 Daiwik Hotels – clean & spiritual comfort</li>
+      <li>🛏️ Guesthouses near temple for budget pilgrims</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🍲 Local Food to Try</h2>
+    <ul>
+      <li>🍛 South Indian thali with sambar & rasam</li>
+      <li>🐟 Fish fry & crab curry at beach shacks</li>
+      <li>🥥 Coconut water & sweet pongal for refreshment</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>💰 Estimated Budget</h2>
+    <p>₹5,000 – ₹9,000 per person for 2N/3D (darshan, stay & travel)</p>
+  </section>
+
+  <section>
+    <h2>🗺️ Rameswaram on Map</h2>
+    <iframe src="https://www.google.com/maps?q=rameswaram+india&output=embed" height="300"></iframe>
+  </section>
+
+  <section>
+    <h2>🎥 Rameswaram Views</h2>
+    <video controls>
+      <source src="../media/videos/rameswaram.mp4" type="video/mp4" />
+    </video>
+  </section>
+
+  <section class="booking-form">
+    <h2>📝 Book This Trip</h2>
+    <form onsubmit="bookTrip(event)">
+      <input type="hidden" id="destination" value="Rameswaram" />
+      <label>Travel Date:</label>
+      <input type="date" id="date" required />
+      <label>Number of People:</label>
+      <input type="number" id="numPeople" min="1" required />
+      <button type="submit">Pay & Book</button>
+    </form>
+  </section><!-- Hotels & Packages Section -->
+  <section class="hotels-packages">
+    <h2>🏨 Recommended Hotels in Rameswaram</h2>
+    <div class="hotel-cards">
+      <div class="hotel-card">
+        <img src="../media/images/hotel_seasand.jpg" alt="Sea Sand Stay">
+        <h3>Sea Sand Stay</h3>
+        <p>Starting at ₹1,900/night</p>
+        <button onclick="bookHotel('Sea Sand Stay')">Book Room</button>
+      </div>
+      <div class="hotel-card">
+        <img src="../media/images/hotel_ramanathgrand.jpg" alt="Ramanath Grand Hotel">
+        <h3>Ramanath Grand Hotel</h3>
+        <p>Starting at ₹2,200/night</p>
+        <button onclick="bookHotel('Ramanath Grand Hotel')">Book Room</button>
+      </div>
+    </div>
+
+    <h2>📦 Popular Packages</h2>
+    <div class="package-cards">
+      <div class="package-card">
+        <h3>2D/1N Temple Darshan</h3>
+        <ul>
+          <li>✔️ Ramanathaswamy Temple visit</li>
+          <li>✔️ Agni Theertham & beach walk</li>
+          <li>✔️ Hotel stay + puja arrangements</li>
+        </ul>
+        <p>₹3,800 per person</p>
+        <button onclick="bookPackage('Temple Darshan')">Book Package</button>
+      </div>
+      <div class="package-card">
+        <h3>4D/3N Spiritual Seaside Escape</h3>
+        <ul>
+          <li>✔️ Dhanushkodi ruins tour</li>
+          <li>✔️ Island sunrise view</li>
+          <li>✔️ Sea-view resort + meals</li>
+        </ul>
+        <p>₹7,500 per person</p>
+        <button onclick="bookPackage('Spiritual Seaside Escape')">Book Package</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function bookHotel(name) {
+      alert(`✅ Hotel Booked: ${name}\nThank you for choosing TravelingBird!`);
+    }
+
+    function bookPackage(name) {
+      alert(`✅ Package Booked: ${name}\nHappy exploring with TravelingBird!`);
+    }
+  </script>
+
+</main>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

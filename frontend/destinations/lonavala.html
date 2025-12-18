@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lonavala - TravelingBrid</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background:
+        linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
+        url('https://www.toptal.com/designers/subtlepatterns/patterns/doodles.png');
+      background-size: 300px;
+      background-attachment: fixed;
+    }
+    nav {
+      background: #0077b6;
+      display: flex;
+      gap: 2rem;
+      padding: 1rem;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a.active {
+      background: white;
+      color: #0077b6;
+      padding: 0.3rem 0.7rem;
+      border-radius: 5px;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    video, iframe, img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .booking-form input, .booking-form button {
+      display: block;
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.7rem;
+      font-size: 1rem;
+    }
+    .booking-form button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .booking-form button:hover {
+      background: #005f8e;
+    }
+  </style>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="../js/script.js"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="../destinations.html" class="active">Destinations</a>
+  <a href="../map.html">Map</a>
+  <a href="../planner.html">Planner</a>
+  <a href="../dashboard.html">Dashboard</a>
+  <a href="../signup.html">Login / Signup</a>
+</nav>
+
+<main>
+  <h1>🌧️ Lonavala – The Monsoon Queen of the Sahyadris</h1>
+  <img src="../media/images/lonavala.jpg" alt="Lonavala Misty View" />
+
+  <section>
+    <h2>🌟 Must-See Spots</h2>
+    <ul>
+      <li>🏞️ Tiger’s Leap – breathtaking valley views</li>
+      <li>💧 Bhushi Dam – famous overflow water fun</li>
+      <li>🌫️ Lion’s Point – mist, wind & magic</li>
+      <li>🏰 Lohagad & Visapur Forts – trekking favorites</li>
+      <li>🍫 Lonavala Chikki Market – sweets & souvenirs</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🎯 Experiences to Enjoy</h2>
+    <ul>
+      <li>☁️ Drive through fog-covered ghats</li>
+      <li>🍵 Hot tea & pakoras at viewpoints</li>
+      <li>🎒 Trek through green hills & historic forts</li>
+      <li>📸 Monsoon photography heaven</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🗓️ Best Time to Visit</h2>
+    <p>June to September – monsoon lush & magical mist</p>
+  </section>
+
+  <section>
+    <h2>🏨 Where to Stay</h2>
+    <ul>
+      <li>🏨 Della Resorts – luxury with adventure</li>
+      <li>🌿 Upper Deck – hilltop stay</li>
+      <li>🛏️ Budget lodges near station & dam</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🍽️ What to Eat</h2>
+    <ul>
+      <li>🍜 Vada Pav & Misal Pav</li>
+      <li>🍫 Peanut & chocolate chikki</li>
+      <li>☕ Cutting chai in rain 😍</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>💰 Budget Estimate</h2>
+    <p>₹3,000 – ₹7,000 per person (2D/1N trip from Mumbai/Pune)</p>
+  </section>
+
+  <section>
+    <h2>🗺️ Lonavala on Map</h2>
+    <iframe src="https://www.google.com/maps?q=lonavala+maharashtra&output=embed" height="300"></iframe>
+  </section>
+
+  <section>
+    <h2>🎥 Monsoon Vibes</h2>
+    <video controls>
+      <source src="../media/videos/lonavala.mp4" type="video/mp4" />
+    </video>
+  </section>
+  
+ad>
+  <meta charset="UTF-8">
+  <title>Lonavala - TravelingBird</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="../destinations.html" class="active">Destinations</a>
+    <a href="../planner.html">Planner</a>
+    <a href="../map.html">Map</a>
+    <a href="../dashboard.html">Dashboard</a>
+    <a href="../signup.html">Signup</a>
+  </nav>
+
+  <section>
+    <h1>🌄 Welcome to Lonavala</h1>
+    <p>Lonavala is a picturesque hill station in Maharashtra, famous for its lush greenery, waterfalls, caves, and chikki. It is the perfect monsoon escape for Mumbaikars and Puneites, with plenty of sightseeing and relaxation options.</p>
+  </section>
+
+  <!-- Hotels & Packages Section -->
+  <section class="hotels-packages">
+    <h2>🏨 Recommended Hotels in Lonavala</h2>
+    <div class="hotel-cards">
+      <div class="hotel-card">
+        <img src="../media/images/hotel_monsooninn.jpg" alt="Monsoon Inn">
+        <h3>Monsoon Inn</h3>
+        <p>Starting at ₹2,100/night</p>
+        <button onclick="bookHotel('Monsoon Inn')">Book Room</button>
+      </div>
+      <div class="hotel-card">
+        <img src="../media/images/hotel_valleybreeze.jpg" alt="Valley Breeze Villa">
+        <h3>Valley Breeze Villa</h3>
+        <p>Starting at ₹2,500/night</p>
+        <button onclick="bookHotel('Valley Breeze Villa')">Book Room</button>
+      </div>
+    </div>
+
+    <h2>🛆 Popular Packages</h2>
+    <div class="package-cards">
+      <div class="package-card">
+        <h3>2D/1N Waterfall & Cave Trail</h3>
+        <ul>
+          <li>✔️ Bhushi Dam + Tiger's Leap</li>
+          <li>✔️ Karla & Bhaja Caves tour</li>
+          <li>✔️ Hotel + sightseeing cab</li>
+        </ul>
+        <p>₹5,000 per person</p>
+        <button onclick="bookPackage('Waterfall & Cave Trail')">Book Package</button>
+      </div>
+      <div class="package-card">
+        <h3>3D/2N Monsoon Romance</h3>
+        <ul>
+          <li>✔️ Private villa stay</li>
+          <li>✔️ Candlelight dinner + spa</li>
+          <li>✔️ Local market tour</li>
+        </ul>
+        <p>₹7,800 per person</p>
+        <button onclick="bookPackage('Monsoon Romance')">Book Package</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function bookHotel(name) {
+      alert(`✅ Hotel Booked: ${name}\nThank you for choosing TravelingBird!`);
+    }
+
+    function bookPackage(name) {
+      alert(`✅ Package Booked: ${name}\nHappy exploring with TravelingBird!`);
+    }
+  </script>
+  <section class="booking-form">
+    <h2>📝 Book This Trip</h2>
+    <form onsubmit="bookTrip(event)">
+      <input type="hidden" id="destination" value="Lonavala" />
+      <label>Travel Date:</label>
+      <input type="date" id="date" required />
+      <label>Number of People:</label>
+      <input type="number" id="numPeople" min="1" required />
+      <button type="submit">Pay & Book</button>
+    </form>
+  </section>
+</main>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Spiti Valley - TravelingBrid</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background:
+        linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
+        url('https://www.toptal.com/designers/subtlepatterns/patterns/doodles.png');
+      background-size: 300px;
+      background-attachment: fixed;
+    }
+    nav {
+      background: #0077b6;
+      display: flex;
+      gap: 2rem;
+      padding: 1rem;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a.active {
+      background: white;
+      color: #0077b6;
+      padding: 0.3rem 0.7rem;
+      border-radius: 5px;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    video, iframe, img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .booking-form input, .booking-form button {
+      display: block;
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.7rem;
+      font-size: 1rem;
+    }
+    .booking-form button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .booking-form button:hover {
+      background: #005f8e;
+    }
+  </style>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="../js/script.js"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="../destinations.html" class="active">Destinations</a>
+  <a href="../map.html">Map</a>
+  <a href="../planner.html">Planner</a>
+  <a href="../dashboard.html">Dashboard</a>
+  <a href="../signup.html">Login / Signup</a>
+</nav>
+
+<main>
+  <h1>❄️ Spiti Valley – Cold Desert Heaven</h1>
+  <img src="../media/images/spiti.jpg" alt="Spiti Snow View" />
+
+  <section>
+    <h2>🌟 Must-Visit Places</h2>
+    <ul>
+      <li>🏯 Key Monastery – majestic & ancient Tibetan vibes</li>
+      <li>🌊 Chandratal Lake – crescent-shaped blue beauty</li>
+      <li>⛰️ Kaza – valley capital with views & cafés</li>
+      <li>🏔️ Hikkim & Komic – highest post office & village</li>
+      <li>📸 Langza – Buddha statue with Himalayan backdrop</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🎯 Adventure Highlights</h2>
+    <ul>
+      <li>🚗 Drive from Manali via Rohtang & Kunzum Pass</li>
+      <li>☃️ Winter trek or snow jeep safari (Nov–Feb)</li>
+      <li>📿 Stay in monastery guesthouses</li>
+      <li>🧘 Stargazing under Himalayan skies</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🗓️ Best Time to Visit</h2>
+    <p>May to September (open roads, dry treks) | December for snow & frozen Spiti ❄️</p>
+  </section>
+
+  <section>
+    <h2>🏨 Stay Options</h2>
+    <ul>
+      <li>🏔️ Zostel Spiti (Kaza) – fun, budget & warm</li>
+      <li>🧘 Gompa guesthouses – peaceful & cultural</li>
+      <li>🌠 Homestays in Langza or Kibber</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🍲 What to Eat</h2>
+    <ul>
+      <li>🍜 Thukpa, Tingmo & Butter Tea</li>
+      <li>🥔 Spitian Aloo & Yak Cheese Dishes</li>
+      <li>🫖 Tea with yak milk & salt (try it once 😄)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>💰 Budget Estimate</h2>
+    <p>₹9,000 – ₹16,000 for 4D/3N trip (stay + cab + food + fuel)</p>
+  </section>
+
+  <section>
+    <h2>🗺️ Spiti on Map</h2>
+    <iframe src="https://www.google.com/maps?q=spiti+valley+india&output=embed" height="300"></iframe>
+  </section>
+
+  <section>
+    <h2>🎥 Spiti Experience</h2>
+    <video controls>
+      <source src="../media/videos/spiti.mp4" type="video/mp4" />
+    </video>
+  </section>
+    <!-- Hotels & Packages Section -->
+  <section class="hotels-packages">
+    <h2>🏨 Recommended Hotels in Spiti</h2>
+    <div class="hotel-cards">
+      <div class="hotel-card">
+        <img src="../media/images/hotel_monasteryview.jpg" alt="Monastery View Stay">
+        <h3>Monastery View Stay</h3>
+        <p>Starting at ₹2,300/night</p>
+        <button onclick="bookHotel('Monastery View Stay')">Book Room</button>
+      </div>
+      <div class="hotel-card">
+        <img src="../media/images/hotel_spitipeaks.jpg" alt="Spiti Peaks Lodge">
+        <h3>Spiti Peaks Lodge</h3>
+        <p>Starting at ₹2,600/night</p>
+        <button onclick="bookHotel('Spiti Peaks Lodge')">Book Room</button>
+      </div>
+    </div>
+
+    <h2>📦 Popular Packages</h2>
+    <div class="package-cards">
+      <div class="package-card">
+        <h3>4D/3N Spiti Explorer</h3>
+        <ul>
+          <li>✔️ Key Monastery & Kaza tour</li>
+          <li>✔️ Tabo & Dhankar visit</li>
+          <li>✔️ 3N stay + transfers</li>
+        </ul>
+        <p>₹8,500 per person</p>
+        <button onclick="bookPackage('Spiti Explorer')">Book Package</button>
+      </div>
+      <div class="package-card">
+        <h3>6D/5N Himalayan High</h3>
+        <ul>
+          <li>✔️ Chandratal Lake + camping</li>
+          <li>✔️ Guided trekking</li>
+          <li>✔️ Premium homestay + meals</li>
+        </ul>
+        <p>₹13,200 per person</p>
+        <button onclick="bookPackage('Himalayan High')">Book Package</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function bookHotel(name) {
+      alert(`✅ Hotel Booked: ${name}\nThank you for choosing TravelingBird!`);
+    }
+
+    function bookPackage(name) {
+      alert(`✅ Package Booked: ${name}\nHappy exploring with TravelingBird!`);
+    }
+  </script>
+
+  <section class="booking-form">
+    <h2>📝 Book This Trip</h2>
+    <form onsubmit="bookTrip(event)">
+      <input type="hidden" id="destination" value="Spiti Valley" />
+      <label>Travel Date:</label>
+      <input type="date" id="date" required />
+      <label>Number of People:</label>
+      <input type="number" id="numPeople" min="1" required />
+      <button type="submit">Pay & Book</button>
+    </form>
+  </section>
+</main>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

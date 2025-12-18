@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kodaikanal - TravelingBird</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background:
+        linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
+        url('https://www.toptal.com/designers/subtlepatterns/patterns/doodles.png');
+      background-size: 300px;
+      background-attachment: fixed;
+    }
+    nav {
+      background: #0077b6;
+      display: flex;
+      gap: 2rem;
+      padding: 1rem;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a.active {
+      background: white;
+      color: #0077b6;
+      padding: 0.3rem 0.7rem;
+      border-radius: 5px;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    video, iframe, img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .booking-form input, .booking-form button {
+      display: block;
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.7rem;
+      font-size: 1rem;
+    }
+    .booking-form button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .booking-form button:hover {
+      background: #005f8e;
+    }
+  </style>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="../js/script.js"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="../destinations.html" class="active">Destinations</a>
+  <a href="../map.html">Map</a>
+  <a href="../planner.html">Planner</a>
+  <a href="../dashboard.html">Dashboard</a>
+  <a href="../signup.html">Login / Signup</a>
+</nav>
+
+<main>
+  <h1>🌄 Kodaikanal – The Misty Princess of the Western Ghats</h1>
+  <img src="../media/images/kodaikanal.jpg" alt="Kodaikanal Lake View" />
+
+  <section>
+    <h2>🌟 Must-Visit Spots</h2>
+    <ul>
+      <li>🛶 Kodaikanal Lake – boating in serene waters</li>
+      <li>🌫️ Coaker’s Walk – foggy cliff views</li>
+      <li>🍫 Chocolate Factory Tour – handmade treats</li>
+      <li>🌲 Pine Forest – peaceful nature walk</li>
+      <li>💧 Silver Cascade & Bear Shola Falls – waterfall wonder</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🎯 Cozy Experiences</h2>
+    <ul>
+      <li>☕ Sip tea while floating clouds pass by</li>
+      <li>🚶 Trek to Dolphin’s Nose viewpoint</li>
+      <li>📸 Take romantic foggy pictures in the forest</li>
+      <li>🧥 Buy woollens & eucalyptus oil from local markets</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🗓️ Best Time to Visit</h2>
+    <p>October to March – cold breeze & less crowd</p>
+  </section>
+
+  <section>
+    <h2>🏨 Where to Stay</h2>
+    <ul>
+      <li>🏨 The Carlton – luxury lakefront stay</li>
+      <li>🌲 Kodai Resort Hotel – cottage charm</li>
+      <li>🛏️ Cozy guesthouses near Pine Forest</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🍽️ What to Eat</h2>
+    <ul>
+      <li>🍛 Tamil thali with sambhar, kootu & poriyal</li>
+      <li>🍫 Handmade chocolates & walnut cake</li>
+      <li>🥔 Masala vada & spicy bajji during rain</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>💰 Budget Estimate</h2>
+    <p>₹4,500 – ₹9,000 per person (2N/3D with lake, stay & food)</p>
+  </section>
+
+  <section>
+    <h2>🗺️ Map View</h2>
+    <iframe src="https://www.google.com/maps?q=kodaikanal+lake&output=embed" height="300"></iframe>
+  </section>
+
+  <section>
+    <h2>🎥 Kodaikanal Views</h2>
+    <video controls>
+      <source src="../media/videos/kodaikanal.mp4" type="video/mp4" />
+    </video>
+  </section>
+
+  <section class="booking-form">
+    <h2>📝 Book This Trip</h2>
+    <form onsubmit="bookTrip(event)">
+      <input type="hidden" id="destination" value="Kodaikanal" />
+      <label>Travel Date:</label>
+      <input type="date" id="date" required />
+      <label>Number of People:</label>
+      <input type="number" id="numPeople" min="1" required />
+      <button type="submit">Pay & Book</button>
+    </form>
+  </section>
+  <!-- Hotels & Packages Section -->
+  <section class="hotels-packages">
+    <h2>🏨 Recommended Hotels in Kodaikanal</h2>
+    <div class="hotel-cards">
+      <div class="hotel-card">
+        <img src="../media/images/hotel_lakepine.jpg" alt="Lake & Pine Resort">
+        <h3>Lake & Pine Resort</h3>
+        <p>Starting at ₹2,200/night</p>
+        <button onclick="bookHotel('Lake & Pine Resort')">Book Room</button>
+      </div>
+      <div class="hotel-card">
+        <img src="../media/images/hotel_cloudmist.jpg" alt="Cloud Mist Inn">
+        <h3>Cloud Mist Inn</h3>
+        <p>Starting at ₹1,900/night</p>
+        <button onclick="bookHotel('Cloud Mist Inn')">Book Room</button>
+      </div>
+    </div>
+
+    <h2>🛆 Popular Packages</h2>
+    <div class="package-cards">
+      <div class="package-card">
+        <h3>3D/2N Nature & Lake Tour</h3>
+        <ul>
+          <li>✔️ Boating in Kodaikanal Lake</li>
+          <li>✔️ Coaker's Walk + Pine Forest</li>
+          <li>✔️ Hotel + sightseeing cab</li>
+        </ul>
+        <p>₹5,600 per person</p>
+        <button onclick="bookPackage('Nature & Lake Tour')">Book Package</button>
+      </div>
+      <div class="package-card">
+        <h3>5D/4N Misty Hills Retreat</h3>
+        <ul>
+          <li>✔️ Guna Caves, Pillar Rocks</li>
+          <li>✔️ Trekking + herbal spa</li>
+          <li>✔️ 3-star hotel + meals</li>
+        </ul>
+        <p>₹9,300 per person</p>
+        <button onclick="bookPackage('Misty Hills Retreat')">Book Package</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function bookHotel(name) {
+      alert(`✅ Hotel Booked: ${name}\nThank you for choosing TravelingBird!`);
+    }
+
+    function bookPackage(name) {
+      alert(`✅ Package Booked: ${name}\nHappy exploring with TravelingBird!`);
+    }
+  </script>
+</main>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

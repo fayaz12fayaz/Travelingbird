@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Amritsar - TravelingBird</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background:
+        linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
+        url('https://www.toptal.com/designers/subtlepatterns/patterns/doodles.png');
+      background-size: 300px;
+      background-attachment: fixed;
+    }
+    nav {
+      background: #0077b6;
+      display: flex;
+      gap: 2rem;
+      padding: 1rem;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a.active {
+      background: white;
+      color: #0077b6;
+      padding: 0.3rem 0.7rem;
+      border-radius: 5px;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    video, iframe, img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .booking-form input, .booking-form button {
+      display: block;
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.7rem;
+      font-size: 1rem;
+    }
+    .booking-form button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .booking-form button:hover {
+      background: #005f8e;
+    }
+  </style>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="../js/script.js"></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="../destinations.html" class="active">Destinations</a>
+  <a href="../map.html">Map</a>
+  <a href="../planner.html">Planner</a>
+  <a href="../dashboard.html">Dashboard</a>
+  <a href="../signup.html">Login / Signup</a>
+</nav>
+
+<main>
+  <h1>🛕 Amritsar – Home of the Golden Temple</h1>
+  <img src="../media/images/amritsar.jpg" alt="Golden Temple Amritsar" />
+
+  <section>
+    <h2>🌟 Top Places to Visit</h2>
+    <ul>
+      <li>🛕 Golden Temple – spiritual Sikh shrine</li>
+      <li>🧡 Wagah Border – Beating Retreat ceremony 🇮🇳</li>
+      <li>🪔 Jallianwala Bagh – historic memorial site</li>
+      <li>🛍️ Hall Bazaar – for phulkari & juttis</li>
+      <li>🏛️ Partition Museum – touching stories of India’s divide</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🎯 Experiences to Cherish</h2>
+    <ul>
+      <li>🙏 Participate in langar (free community meal)</li>
+      <li>📿 Sit by the Sarovar during sunset</li>
+      <li>🎖️ Feel patriotism at Wagah parade</li>
+      <li>🥤 Drink lassi in steel glass at every street 😄</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🗓️ Best Time to Visit</h2>
+    <p>November to March – cool weather, ideal for temple visit and Wagah ceremony</p>
+  </section>
+
+  <section>
+    <h2>🏨 Recommended Stays</h2>
+    <ul>
+      <li>🏨 Hyatt Regency Amritsar – luxury near temple</li>
+      <li>🏡 Ranjit's Svaasa – heritage boutique stay</li>
+      <li>🛌 Budget hotels near Golden Temple lane</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🍴 What to Eat</h2>
+    <ul>
+      <li>🍛 Amritsari Kulcha with chhole & butter</li>
+      <li>🥤 Thick lassi & creamy chaach</li>
+      <li>🍢 Tandoori Paneer & Fish fry</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>💰 Budget Estimate</h2>
+    <p>₹5,000 – ₹9,000 per person (2N/3D stay with darshan + food + Wagah)</p>
+  </section>
+
+  <section>
+    <h2>🗺️ Map Location</h2>
+    <iframe src="https://www.google.com/maps?q=golden+temple+amritsar&output=embed" height="300"></iframe>
+  </section>
+
+  <section>
+    <h2>🎥 Amritsar in Motion</h2>
+    <video controls>
+      <source src="../media/videos/amritsar.mp4" type="video/mp4" />
+    </video>
+  </section>
+ <!-- Hotels & Packages Section -->
+  <section class="hotels-packages">
+    <h2>🏨 Recommended Hotels in Amritsar</h2>
+    <div class="hotel-cards">
+      <div class="hotel-card">
+        <img src="../media/images/hotel_goldinn.jpg" alt="Gold Inn">
+        <h3>Gold Inn</h3>
+        <p>Starting at ₹2,000/night</p>
+        <a href="../booking.html?type=package&name=Gold Inn">
+  <button>Book Package</button>
+</a>
+
+      </div>
+      <div class="hotel-card">
+        <img src="../media/images/hotel_divinecourt.jpg" alt="Divine Court">
+        <h3>Divine Court</h3>
+        <p>Starting at ₹2,300/night</p>
+        <a href="../booking.html?type=hotel&name=Divine Court">
+  <button>Book Room</button>
+</a>
+
+      </div>
+    </div>
+
+    <h2>📦 Popular Packages</h2>
+    <div class="package-cards">
+      <div class="package-card">
+        <h3>2D/1N Golden Temple Tour</h3>
+        <ul>
+          <li>✔️ Golden Temple visit</li>
+          <li>✔️ Jallianwala Bagh + Partition Museum</li>
+          <li>✔️ Hotel stay + breakfast</li>
+        </ul>
+        <p>₹3,999 per person</p>
+        <a href="../booking.html?type=package&name=Golden Temple Tour">
+  <button>Book Package</button>
+</a>
+
+      </div>
+      <div class="package-card">
+        <h3>3D/2N Amritsar Heritage Package</h3>
+        <ul>
+          <li>✔️ Wagah Border ceremony</li>
+          <li>✔️ City sightseeing + cultural show</li>
+          <li>✔️ 3-star hotel + all meals</li>
+        </ul>
+        <p>₹6,499 per person</p>
+        <a href="../booking.html?type=package&name=Amritsar Heritage Package">
+  <button>Book Package</button>
+</a>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function bookHotel(name) {
+      alert(`✅ Hotel Booked: ${name}\nThank you for choosing TravelingBird!`);
+    }
+
+    function bookPackage(name) {
+      alert(`✅ Package Booked: ${name}\nHappy exploring with TravelingBird!`);
+    }
+  </script>
+  <section class="booking-form">
+    <h2>📝 Book This Trip</h2>
+    <form onsubmit="bookTrip(event)">
+      <input type="hidden" id="destination" value="Amritsar" />
+      <label>Travel Date:</label>
+      <input type="date" id="date" required />
+      <label>Number of People:</label>
+      <input type="number" id="numPeople" min="1" required />
+      <button type="submit">Pay & Book</button>
+    </form>
+  </section>
+</main>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

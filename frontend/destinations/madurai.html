@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Madurai - TravelingBrid</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background:
+        linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
+        url('https://www.toptal.com/designers/subtlepatterns/patterns/doodles.png');
+      background-size: 300px;
+      background-attachment: fixed;
+    }
+    nav {
+      background: #0077b6;
+      display: flex;
+      gap: 2rem;
+      padding: 1rem;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a.active {
+      background: white;
+      color: #0077b6;
+      padding: 0.3rem 0.7rem;
+      border-radius: 5px;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    video, iframe, img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .booking-form input, .booking-form button {
+      display: block;
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.7rem;
+      font-size: 1rem;
+    }
+    .booking-form button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .booking-form button:hover {
+      background: #005f8e;
+    }
+  </style>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="../js/script.js"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="../destinations.html" class="active">Destinations</a>
+  <a href="../map.html">Map</a>
+  <a href="../planner.html">Planner</a>
+  <a href="../dashboard.html">Dashboard</a>
+  <a href="../signup.html">Login / Signup</a>
+</nav>
+
+<main>
+  <h1>🛕 Madurai – The Soul of Tamil Nadu</h1>
+  <img src="../media/images/madurai.jpg" alt="Meenakshi Temple Madurai" />
+
+  <section>
+    <h2>🌟 Must-See Attractions</h2>
+    <ul>
+      <li>🛕 Meenakshi Amman Temple – colorful, spiritual, iconic</li>
+      <li>🏰 Thirumalai Nayakar Palace – grand Indo-Saracenic design</li>
+      <li>📚 Gandhi Museum – freedom movement legacy</li>
+      <li>🪔 Alagar Kovil & Pazhamudircholai temples nearby</li>
+      <li>🧄 Madurai flower & spice markets – vibrant & aromatic</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🎯 Cultural Delights</h2>
+    <ul>
+      <li>🌺 Wear jasmine garlands & silk sarees</li>
+      <li>🎭 Watch temple rituals & dance performances</li>
+      <li>📸 Capture the temple’s gopurams at night</li>
+      <li>🛍️ Shop brass idols & cotton fabrics</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🗓️ Best Time to Visit</h2>
+    <p>October to March – pleasant for darshan & sightseeing</p>
+  </section>
+
+  <section>
+    <h2>🏨 Recommended Stays</h2>
+    <ul>
+      <li>🏨 The Gateway Hotel – heritage & comfort</li>
+      <li>🛏️ Royal Court – budget with great location</li>
+      <li>🌃 Homestays near the temple for immersive vibe</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🍲 Food You Can’t Miss</h2>
+    <ul>
+      <li>🍛 South Indian meals served on banana leaf</li>
+      <li>🥞 Jigarthanda – Madurai’s iconic cold drink</li>
+      <li>🍲 Kothu Parotta & Chettinad curry</li>
+      <li>☕ Filter coffee at street-side shops</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>💰 Budget Estimate</h2>
+    <p>₹4,500 – ₹8,500 per person (2N/3D stay + darshan + local food)</p>
+  </section>
+
+  <section>
+    <h2>🗺️ Madurai on Map</h2>
+    <iframe src="https://www.google.com/maps?q=madurai+meenakshi+temple&output=embed" height="300"></iframe>
+  </section>
+
+  <section>
+    <h2>🎥 Madurai Moments</h2>
+    <video controls>
+      <source src="../media/videos/madurai.mp4" type="video/mp4" />
+    </video>
+  </section>
+
+  <section class="booking-form">
+    <h2>📝 Book This Trip</h2>
+    <form onsubmit="bookTrip(event)">
+      <input type="hidden" id="destination" value="Madurai" />
+      <label>Travel Date:</label>
+      <input type="date" id="date" required />
+      <label>Number of People:</label>
+      <input type="number" id="numPeople" min="1" required />
+      <button type="submit">Pay & Book</button>
+    </form>
+  </section>
+   <!-- Hotels & Packages Section -->
+  <section class="hotels-packages">
+    <h2>🏨 Recommended Hotels in Madurai</h2>
+    <div class="hotel-cards">
+      <div class="hotel-card">
+        <img src="../media/images/hotel_templeinn.jpg" alt="Temple Inn">
+        <h3>Temple Inn</h3>
+        <p>Starting at ₹1,800/night</p>
+        <button onclick="bookHotel('Temple Inn')">Book Room</button>
+      </div>
+      <div class="hotel-card">
+        <img src="../media/images/hotel_maduraiheritage.jpg" alt="Madurai Heritage Hotel">
+        <h3>Madurai Heritage Hotel</h3>
+        <p>Starting at ₹2,200/night</p>
+        <button onclick="bookHotel('Madurai Heritage Hotel')">Book Room</button>
+      </div>
+    </div>
+
+    <h2>🛆 Popular Packages</h2>
+    <div class="package-cards">
+      <div class="package-card">
+        <h3>2D/1N Temple & Culture Tour</h3>
+        <ul>
+          <li>✔️ Meenakshi Temple & Palace</li>
+          <li>✔️ Banana market & flower bazaar</li>
+          <li>✔️ Local food tasting</li>
+        </ul>
+        <p>₹4,100 per person</p>
+        <button onclick="bookPackage('Temple & Culture Tour')">Book Package</button>
+      </div>
+      <div class="package-card">
+        <h3>4D/3N Spiritual South Escape</h3>
+        <ul>
+          <li>✔️ Temples + Gandhi Museum</li>
+          <li>✔️ Traditional meals + classical music</li>
+          <li>✔️ Hotel stay + transfers</li>
+        </ul>
+        <p>₹8,300 per person</p>
+        <button onclick="bookPackage('Spiritual South Escape')">Book Package</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function bookHotel(name) {
+      alert(`✅ Hotel Booked: ${name}\nThank you for choosing TravelingBird!`);
+    }
+
+    function bookPackage(name) {
+      alert(`✅ Package Booked: ${name}\nHappy exploring with TravelingBird!`);
+    }
+  </script>
+</main>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

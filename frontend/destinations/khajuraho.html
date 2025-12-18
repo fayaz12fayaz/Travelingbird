@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Khajuraho - TravelingBrid</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background:
+        linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
+        url('https://www.toptal.com/designers/subtlepatterns/patterns/doodles.png');
+      background-size: 300px;
+      background-attachment: fixed;
+    }
+    nav {
+      background: #0077b6;
+      display: flex;
+      gap: 2rem;
+      padding: 1rem;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a.active {
+      background: white;
+      color: #0077b6;
+      padding: 0.3rem 0.7rem;
+      border-radius: 5px;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    video, iframe, img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .booking-form input, .booking-form button {
+      display: block;
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.7rem;
+      font-size: 1rem;
+    }
+    .booking-form button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .booking-form button:hover {
+      background: #005f8e;
+    }
+  </style>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="../js/script.js"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="../destinations.html" class="active">Destinations</a>
+  <a href="../map.html">Map</a>
+  <a href="../planner.html">Planner</a>
+  <a href="../dashboard.html">Dashboard</a>
+  <a href="../signup.html">Login / Signup</a>
+</nav>
+
+<main>
+  <h1>🏯 Khajuraho – Love Carved in Stone</h1>
+  <img src="../media/images/khajuraho.jpg" alt="Khajuraho Temples" />
+
+  <section>
+    <h2>🌟 Top Attractions</h2>
+    <ul>
+      <li>🛕 Kandariya Mahadev Temple – most ornate & iconic</li>
+      <li>🎭 Light & Sound Show at Western Group of Temples</li>
+      <li>🪷 Lakshmana & Vishwanath Temples – symmetry & sculpture</li>
+      <li>🏺 Khajuraho Dance Festival – classical art performances</li>
+      <li>🏛️ Archaeological Museum – ancient relics & history</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🎯 Experiences to Feel</h2>
+    <ul>
+      <li>🎨 Admire erotic and divine carvings together</li>
+      <li>🌅 Sunrise temple tour with spiritual chants</li>
+      <li>📸 Macro photography of art in sandstone</li>
+      <li>🎶 Attend a live Bharatnatyam/Kathak dance</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🗓️ Best Time to Visit</h2>
+    <p>October to March (especially during Khajuraho Dance Festival in February)</p>
+  </section>
+
+  <section>
+    <h2>🏨 Recommended Stays</h2>
+    <ul>
+      <li>🏨 The Lalit Temple View – luxury with history views</li>
+      <li>🏡 Hotel Isabel Palace – budget with comfort</li>
+      <li>🛌 Hostels & guesthouses near temple entry gate</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🍽️ What to Try</h2>
+    <ul>
+      <li>🍛 Bundeli Thali – local central Indian delicacies</li>
+      <li>🥘 Dal Bafla & spicy sabzi</li>
+      <li>🍬 Khajur sweets & kachoris</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>💰 Estimated Budget</h2>
+    <p>₹4,000 – ₹8,000 per person for 2N/3D (temples + show + food + stay)</p>
+  </section>
+
+  <section>
+    <h2>🗺️ Khajuraho on Map</h2>
+    <iframe src="https://www.google.com/maps?q=khajuraho+temples&output=embed" height="300"></iframe>
+  </section>
+
+  <section>
+    <h2>🎥 Khajuraho Vibes</h2>
+    <video controls>
+      <source src="../media/videos/khajuraho.mp4" type="video/mp4" />
+    </video>
+  </section>
+  <!-- Hotels & Packages Section -->
+  <section class="hotels-packages">
+    <h2>🏨 Recommended Hotels in Khajuraho</h2>
+    <div class="hotel-cards">
+      <div class="hotel-card">
+        <img src="../media/images/hotel_sculptureresidency.jpg" alt="Sculpture Residency">
+        <h3>Sculpture Residency</h3>
+        <p>Starting at ₹2,000/night</p>
+        <button onclick="bookHotel('Sculpture Residency')">Book Room</button>
+      </div>
+      <div class="hotel-card">
+        <img src="../media/images/hotel_harmonyheritage.jpg" alt="Harmony Heritage Hotel">
+        <h3>Harmony Heritage Hotel</h3>
+        <p>Starting at ₹1,850/night</p>
+        <button onclick="bookHotel('Harmony Heritage Hotel')">Book Room</button>
+      </div>
+    </div>
+
+    <h2>📦 Popular Packages</h2>
+    <div class="package-cards">
+      <div class="package-card">
+        <h3>2D/1N Temple Trail</h3>
+        <ul>
+          <li>✔️ Guided temple visit</li>
+          <li>✔️ Sound & Light show</li>
+          <li>✔️ Hotel + breakfast</li>
+        </ul>
+        <p>₹3,700 per person</p>
+        <button onclick="bookPackage('Temple Trail')">Book Package</button>
+      </div>
+      <div class="package-card">
+        <h3>4D/3N Heritage Explorer</h3>
+        <ul>
+          <li>✔️ Western & Eastern Group temples</li>
+          <li>✔️ Raneh Falls visit + local food walk</li>
+          <li>✔️ Premium hotel + transfers</li>
+        </ul>
+        <p>₹7,200 per person</p>
+        <button onclick="bookPackage('Heritage Explorer')">Book Package</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function bookHotel(name) {
+      alert(`✅ Hotel Booked: ${name}\nThank you for choosing TravelingBird!`);
+    }
+
+    function bookPackage(name) {
+      alert(`✅ Package Booked: ${name}\nHappy exploring with TravelingBird!`);
+    }
+  </script>
+
+  <section class="booking-form">
+    <h2>📝 Book This Trip</h2>
+    <form onsubmit="bookTrip(event)">
+      <input type="hidden" id="destination" value="Khajuraho" />
+      <label>Travel Date:</label>
+      <input type="date" id="date" required />
+      <label>Number of People:</label>
+      <input type="number" id="numPeople" min="1" required />
+      <button type="submit">Pay & Book</button>
+    </form>
+  </section>
+</main>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

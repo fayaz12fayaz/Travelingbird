@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mount Abu - TravelingBrid</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background:
+        linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
+        url('https://www.toptal.com/designers/subtlepatterns/patterns/doodles.png');
+      background-size: 300px;
+      background-attachment: fixed;
+    }
+    nav {
+      background: #0077b6;
+      display: flex;
+      gap: 2rem;
+      padding: 1rem;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a.active {
+      background: white;
+      color: #0077b6;
+      padding: 0.3rem 0.7rem;
+      border-radius: 5px;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    video, iframe, img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .booking-form input, .booking-form button {
+      display: block;
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.7rem;
+      font-size: 1rem;
+    }
+    .booking-form button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .booking-form button:hover {
+      background: #005f8e;
+    }
+  </style>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="../js/script.js"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="../destinations.html" class="active">Destinations</a>
+  <a href="../map.html">Map</a>
+  <a href="../planner.html">Planner</a>
+  <a href="../dashboard.html">Dashboard</a>
+  <a href="../signup.html">Login / Signup</a>
+</nav>
+
+<main>
+  <h1>🏞️ Mount Abu – The Cool Crown of Rajasthan</h1>
+  <img src="../media/images/mountabu.jpg" alt="Mount Abu Lake View" />
+
+  <section>
+    <h2>🌟 Places You’ll Love</h2>
+    <ul>
+      <li>🛶 Nakki Lake – boating & lakeside walk</li>
+      <li>🕍 Dilwara Temples – Jain marble carvings</li>
+      <li>🌅 Sunset Point – golden hour in the hills</li>
+      <li>🌺 Mount Abu Wildlife Sanctuary – rich flora & fauna</li>
+      <li>🌳 Trevor’s Tank – picnic spot in forest</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🎯 Experiences to Enjoy</h2>
+    <ul>
+      <li>🚣‍♀️ Paddle boat in Nakki Lake</li>
+      <li>🧘 Morning walk with foggy mountain air</li>
+      <li>📸 Temple architecture photography</li>
+      <li>🍨 Try ice cream at altitude for fun!</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🗓️ Best Time to Visit</h2>
+    <p>October to March – best for cool hill weather</p>
+  </section>
+
+  <section>
+    <h2>🏨 Where to Stay</h2>
+    <ul>
+      <li>🏨 Hotel Hilltone – scenic & comfortable</li>
+      <li>🌿 Sterling Mount Abu – garden stay</li>
+      <li>🛏️ Budget guesthouses near the lake</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🍽️ Must-Try Food</h2>
+    <ul>
+      <li>🍛 Rajasthani thali with gatte ki sabzi</li>
+      <li>🍲 Hot Maggi near lake during evenings</li>
+      <li>🧁 Homemade cakes & tikkis at street shops</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>💰 Budget Estimate</h2>
+    <p>₹5,000 – ₹9,000 per person for 2N/3D (stay + boating + food)</p>
+  </section>
+
+  <section>
+    <h2>🗺️ Mount Abu Map</h2>
+    <iframe src="https://www.google.com/maps?q=mount+abu+rajasthan&output=embed" height="300"></iframe>
+  </section>
+
+  <section>
+    <h2>🎥 Mount Abu Vibes</h2>
+    <video controls>
+      <source src="../media/videos/mountabu.mp4" type="video/mp4" />
+    </video>
+  </section>
+   <!-- Hotels & Packages Section -->
+  <section class="hotels-packages">
+    <h2>🏨 Recommended Hotels in Mount Abu</h2>
+    <div class="hotel-cards">
+      <div class="hotel-card">
+        <img src="../media/images/hotel_lakeview.jpg" alt="Lake View Retreat">
+        <h3>Lake View Retreat</h3>
+        <p>Starting at ₹2,200/night</p>
+        <button onclick="bookHotel('Lake View Retreat')">Book Room</button>
+      </div>
+      <div class="hotel-card">
+        <img src="../media/images/hotel_hillnwoods.jpg" alt="Hill N Woods">
+        <h3>Hill N Woods</h3>
+        <p>Starting at ₹2,000/night</p>
+        <button onclick="bookHotel('Hill N Woods')">Book Room</button>
+      </div>
+    </div>
+
+    <h2>📦 Popular Packages</h2>
+    <div class="package-cards">
+      <div class="package-card">
+        <h3>2D/1N Mount Abu Quick Trip</h3>
+        <ul>
+          <li>✔️ Nakki Lake boating</li>
+          <li>✔️ Sunset Point & Dilwara Temples</li>
+          <li>✔️ 1-night hotel + cab</li>
+        </ul>
+        <p>₹3,999 per person</p>
+        <button onclick="bookPackage('Mount Abu Quick Trip')">Book Package</button>
+      </div>
+      <div class="package-card">
+        <h3>4D/3N Relaxing Hill Escape</h3>
+        <ul>
+          <li>✔️ Nature walks + picnic at Peace Park</li>
+          <li>✔️ 3-star stay + guide</li>
+          <li>✔️ All meals included</li>
+        </ul>
+        <p>₹7,800 per person</p>
+        <button onclick="bookPackage('Relaxing Hill Escape')">Book Package</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function bookHotel(name) {
+      alert(`✅ Hotel Booked: ${name}\nThank you for choosing TravelingBird!`);
+    }
+
+    function bookPackage(name) {
+      alert(`✅ Package Booked: ${name}\nHappy exploring with TravelingBird!`);
+    }
+  </script>
+
+  <section class="booking-form">
+    <h2>📝 Book This Trip</h2>
+    <form onsubmit="bookTrip(event)">
+      <input type="hidden" id="destination" value="Mount Abu" />
+      <label>Travel Date:</label>
+      <input type="date" id="date" required />
+      <label>Number of People:</label>
+      <input type="number" id="numPeople" min="1" required />
+      <button type="submit">Pay & Book</button>
+    </form>
+  </section>
+</main>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ooty - TravelingBrid</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background:
+        linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+        url('https://www.toptal.com/designers/subtlepatterns/patterns/doodles.png');
+      background-size: 300px;
+      background-attachment: fixed;
+    }
+    nav {
+      background: #0077b6;
+      display: flex;
+      gap: 2rem;
+      padding: 1rem;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a.active {
+      background: white;
+      color: #0077b6;
+      padding: 0.3rem 0.7rem;
+      border-radius: 5px;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    video, iframe, img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .booking-form input, .booking-form button {
+      display: block;
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.7rem;
+      font-size: 1rem;
+    }
+    .booking-form button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .booking-form button:hover {
+      background: #005f8e;
+    }
+  </style>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="../js/script.js"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="../destinations.html" class="active">Destinations</a>
+  <a href="../map.html">Map</a>
+  <a href="../planner.html">Planner</a>
+  <a href="../dashboard.html">Dashboard</a>
+  <a href="../signup.html">Login / Signup</a>
+</nav>
+
+<main>
+  <h1>🌸 Ooty – Queen of the Nilgiris</h1>
+  <img src="../media/images/ooty.jpg" alt="Ooty Tea Gardens" />
+
+  <section>
+    <h2>🌟 Attractions You’ll Love</h2>
+    <ul>
+      <li>🌿 Botanical Garden – vibrant flowers & green lawns</li>
+      <li>🛶 Ooty Lake – paddle boating with mountain views</li>
+      <li>🚂 Nilgiri Mountain Railway – scenic heritage toy train</li>
+      <li>🫖 Tea Museum – see tea making & sip fresh brews</li>
+      <li>🪻 Doddabetta Peak – panoramic Nilgiri views</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🎯 Top Activities</h2>
+    <ul>
+      <li>🚂 Take the toy train from Coonoor to Ooty</li>
+      <li>🚶 Nature walk in Rose Garden or Pine Forest</li>
+      <li>📷 Enjoy misty mornings & click postcard views</li>
+      <li>🍫 Visit homemade chocolate factory</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🗓️ Best Time to Visit</h2>
+    <p>March to June for flower bloom 🌼 | December for winter fog & chill ❄️</p>
+  </section>
+
+  <section>
+    <h2>🏨 Where to Stay</h2>
+    <ul>
+      <li>🏨 Sterling Ooty Elk Hill – hills & luxury</li>
+      <li>🌼 Sinclairs Retreat – near Rose Garden</li>
+      <li>🛏️ Zostel Ooty – cozy & social</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🍽️ Food & Tea Delights</h2>
+    <ul>
+      <li>🫖 Masala tea & cardamom chai from tea shops</li>
+      <li>🍛 South Indian meals & mushroom biryani</li>
+      <li>🍫 Handmade fudge, truffles, and dark chocolates</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>💰 Budget Range</h2>
+    <p>₹7,000 – ₹11,000 per person (3D/2N trip with train, stay, & meals)</p>
+  </section>
+
+  <section>
+    <h2>🗺️ Ooty Map View</h2>
+    <iframe src="https://www.google.com/maps?q=ooty+india&output=embed" height="300"></iframe>
+  </section>
+
+  <section>
+    <h2>🎥 Feel the Vibe</h2>
+    <video controls>
+      <source src="../media/videos/ooty.mp4" type="video/mp4" />
+    </video>
+  </section>
+  <!-- Hotels & Packages Section -->
+  <section class="hotels-packages">
+    <h2>🏨 Recommended Hotels in Ooty</h2>
+    <div class="hotel-cards">
+      <div class="hotel-card">
+        <img src="../media/images/hotel_teavalley.jpg" alt="Tea Valley Resort">
+        <h3>Tea Valley Resort</h3>
+        <p>Starting at ₹2,300/night</p>
+        <button onclick="bookHotel('Tea Valley Resort')">Book Room</button>
+      </div>
+      <div class="hotel-card">
+        <img src="../media/images/hotel_greenhill.jpg" alt="Green Hill Stay">
+        <h3>Green Hill Stay</h3>
+        <p>Starting at ₹1,900/night</p>
+        <button onclick="bookHotel('Green Hill Stay')">Book Room</button>
+      </div>
+    </div>
+
+    <h2>📦 Popular Packages</h2>
+    <div class="package-cards">
+      <div class="package-card">
+        <h3>3D/2N Ooty Discovery</h3>
+        <ul>
+          <li>✔️ Botanical Gardens & Doddabetta Peak</li>
+          <li>✔️ 2-star stay + breakfast</li>
+          <li>✔️ Local sightseeing cab</li>
+        </ul>
+        <p>₹5,200 per person</p>
+        <button onclick="bookPackage('Ooty Discovery')">Book Package</button>
+      </div>
+      <div class="package-card">
+        <h3>5D/4N Tea Garden Escape</h3>
+        <ul>
+          <li>✔️ Premium stay near tea estate</li>
+          <li>✔️ Nilgiri train ride included</li>
+          <li>✔️ Bonfire + trekking</li>
+        </ul>
+        <p>₹9,800 per person</p>
+        <button onclick="bookPackage('Tea Garden Escape')">Book Package</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function bookHotel(name) {
+      alert(`✅ Hotel Booked: ${name}\nThank you for choosing TravelingBird!`);
+    }
+
+    function bookPackage(name) {
+      alert(`✅ Package Booked: ${name}\nHappy exploring with TravelingBird!`);
+    }
+  </script>
+
+  <section class="booking-form">
+    <h2>📝 Book This Trip</h2>
+    <form onsubmit="bookTrip(event)">
+      <input type="hidden" id="destination" value="Ooty" />
+      <label>Travel Date:</label>
+      <input type="date" id="date" required />
+      <label>Number of People:</label>
+      <input type="number" id="numPeople" min="1" required />
+      <button type="submit">Pay & Book</button>
+    </form>
+  </section>
+</main>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

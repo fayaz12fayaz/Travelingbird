@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shimla - TravelingBird</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background:
+        linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+        url('https://www.toptal.com/designers/subtlepatterns/patterns/doodles.png');
+      background-size: 300px;
+      background-attachment: fixed;
+    }
+    nav {
+      background: #0077b6;
+      display: flex;
+      gap: 2rem;
+      padding: 1rem;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a.active {
+      background: white;
+      color: #0077b6;
+      padding: 0.3rem 0.7rem;
+      border-radius: 5px;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    video, iframe, img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .booking-form input, .booking-form button {
+      display: block;
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.7rem;
+      font-size: 1rem;
+    }
+    .booking-form button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .booking-form button:hover {
+      background: #005f8e;
+    }
+  </style>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="../js/script.js"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="../destinations.html" class="active">Destinations</a>
+  <a href="../map.html">Map</a>
+  <a href="../planner.html">Planner</a>
+  <a href="../dashboard.html">Dashboard</a>
+  <a href="../signup.html">Login / Signup</a>
+</nav>
+
+<main>
+  <h1>🌲 Shimla – Queen of the Hills</h1>
+  <img src="../media/images/shimla.jpg" alt="Snow in Shimla" />
+
+  <section>
+    <h2>🌟 Must-Visit Places</h2>
+    <ul>
+      <li>🚶 The Ridge & Mall Road – stroll, shop & snacks</li>
+      <li>🚂 Kalka-Shimla Toy Train – scenic mountain rail</li>
+      <li>❄️ Kufri – snow activities & yak rides</li>
+      <li>🏛️ Viceregal Lodge – colonial heritage</li>
+      <li>🛕 Jakhoo Temple – panoramic hilltop views</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🎯 Best Activities</h2>
+    <ul>
+      <li>☕ Enjoy hot coffee in cold breeze on the Ridge</li>
+      <li>🚠 Horse ride to Jakhoo Temple</li>
+      <li>⛷️ Snow tubing & skiing at Kufri (Dec–Feb)</li>
+      <li>🧣 Street shopping for woollens and crafts</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🗓️ Best Time to Visit</h2>
+    <p>March to June for cool summer 🌸, December to February for snow ❄️</p>
+  </section>
+
+  <section>
+    <h2>🏨 Where to Stay</h2>
+    <ul>
+      <li>🏨 The Oberoi Cecil – luxury colonial charm</li>
+      <li>🌲 Woodville Palace Hotel – vintage vibes</li>
+      <li>🛏️ Hotel Willow Banks – comfort on Mall Road</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🍽️ Food You’ll Love</h2>
+    <ul>
+      <li>🍜 Madra (Himachali dish)</li>
+      <li>🥟 Momos & Thukpa from Tibetan cafes</li>
+      <li>🍗 Tandoori snacks on Mall Road</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>💰 Budget Overview</h2>
+    <p>₹7,000 – ₹12,000 per person (3-day trip with stay, food & activities)</p>
+  </section>
+
+  <section>
+    <h2>🗺️ Shimla Map</h2>
+    <iframe src="https://www.google.com/maps?q=shimla+india&output=embed" height="300"></iframe>
+  </section>
+
+  <section>
+    <h2>🎥 Watch Shimla Snow</h2>
+    <video controls>
+      <source src="../media/videos/shimla.mp4" type="video/mp4" />
+    </video>
+  </section>
+  <!-- Hotels & Packages Section -->
+  <section class="hotels-packages">
+    <h2>🏨 Recommended Hotels in Shimla</h2>
+    <div class="hotel-cards">
+      <div class="hotel-card">
+        <img src="../media/images/hotel_heritagegrand.jpg" alt="Heritage Grand">
+        <h3>Heritage Grand</h3>
+        <p>Starting at ₹2,700/night</p>
+        <button onclick="bookHotel('Heritage Grand')">Book Room</button>
+      </div>
+      <div class="hotel-card">
+        <img src="../media/images/hotel_snowcrest.jpg" alt="Snow Crest Lodge">
+        <h3>Snow Crest Lodge</h3>
+        <p>Starting at ₹2,100/night</p>
+        <button onclick="bookHotel('Snow Crest Lodge')">Book Room</button>
+      </div>
+    </div>
+
+    <h2>📦 Popular Packages</h2>
+    <div class="package-cards">
+      <div class="package-card">
+        <h3>3D/2N Winter Charm</h3>
+        <ul>
+          <li>✔️ Toy train ride</li>
+          <li>✔️ Shimla Mall Road tour</li>
+          <li>✔️ Breakfast included</li>
+        </ul>
+        <p>₹5,800 per person</p>
+        <button onclick="bookPackage('Winter Charm')">Book Package</button>
+      </div>
+      <div class="package-card">
+        <h3>Luxury Snowfall Escape – 5D/4N</h3>
+        <ul>
+          <li>✔️ 4-star hotel</li>
+          <li>✔️ Local guide and cab</li>
+          <li>✔️ Kufri adventure + meals</li>
+        </ul>
+        <p>₹10,500 per person</p>
+        <button onclick="bookPackage('Luxury Snowfall Escape')">Book Package</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function bookHotel(name) {
+      alert(`✅ Hotel Booked: ${name}\nThank you for choosing TravelingBird!`);
+    }
+
+    function bookPackage(name) {
+      alert(`✅ Package Booked: ${name}\nHappy exploring with TravelingBird!`);
+    }
+  </script>
+  <section class="booking-form">
+    <h2>📝 Book This Trip</h2>
+    <form onsubmit="bookTrip(event)">
+      <input type="hidden" id="destination" value="Shimla" />
+      <label>Travel Date:</label>
+      <input type="date" id="date" required />
+      <label>Number of People:</label>
+      <input type="number" id="numPeople" min="1" required />
+      <button type="submit">Pay & Book</button>
+    </form>
+  </section>
+</main>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

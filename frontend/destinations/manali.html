@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Manali - TravelingBrid</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background:
+        linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+        url('https://www.toptal.com/designers/subtlepatterns/patterns/doodles.png');
+      background-size: 300px;
+      background-attachment: fixed;
+    }
+    nav {
+      background: #0077b6;
+      display: flex;
+      gap: 2rem;
+      padding: 1rem;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a.active {
+      background: white;
+      color: #0077b6;
+      padding: 0.3rem 0.7rem;
+      border-radius: 5px;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    video, iframe, img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .booking-form input, .booking-form button {
+      display: block;
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.7rem;
+      font-size: 1rem;
+    }
+    .booking-form button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .booking-form button:hover {
+      background: #005f8e;
+    }
+  </style>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="../js/script.js"></script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="../destinations.html" class="active">Destinations</a>
+  <a href="../map.html">Map</a>
+  <a href="../planner.html">Planner</a>
+  <a href="../dashboard.html">Dashboard</a>
+  <a href="../signup.html">Login / Signup</a>
+</nav>
+
+<main>
+  <h1>🏔️ Manali, Himachal Pradesh</h1>
+  <img src="../media/images/manali.jpg" alt="Manali Scenery" />
+
+  <section>
+    <h2>🌟 Top Tourist Attractions</h2>
+    <ul>
+      <li>❄️ Solang Valley – skiing, snow scooters, paragliding</li>
+      <li>🧊 Rohtang Pass – snow-covered mountain pass open in summer</li>
+      <li>🏛️ Hadimba Temple – ancient cave temple with cedar forests</li>
+      <li>🌊 Vashisht Hot Springs – natural sulphur springs for a warm dip</li>
+      <li>🌄 Jogini Waterfall – serene trek spot</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🎯 Must-Do Activities</h2>
+    <ul>
+      <li>⛷️ Skiing in Solang Valley (Nov–Feb)</li>
+      <li>🚴‍♂️ Mountain biking on Himalayan trails</li>
+      <li>🎒 Trekking to Bhrigu Lake, Beas Kund</li>
+      <li>🧘‍♀️ Yoga & chill cafés in Old Manali</li>
+      <li>🚡 Take a ropeway ride with panoramic views</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🗓️ Best Time to Visit</h2>
+    <p>October to February for snow ❄️ & skiing | March to June for adventure & greenery 🌿</p>
+  </section>
+
+  <section>
+    <h2>🏨 Recommended Hotels</h2>
+    <ul>
+      <li>🌟 The Himalayan – luxury castle-style hotel with snowy views</li>
+      <li>🏔️ Snow Valley Resort – scenic views with modern amenities</li>
+      <li>💰 Johnson Lodge – budget friendly and centrally located</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🍽️ Must-Try Foods</h2>
+    <ul>
+      <li>🥟 Siddu – steamed bread with stuffing (local delicacy)</li>
+      <li>🐟 Himalayan Trout – fresh grilled fish from local rivers</li>
+      <li>🍜 Thukpa & Momos – Tibetan flavors in Old Manali</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>💰 Estimated Budget</h2>
+    <p>₹9,000 – ₹13,000 per person for 3-day trip (including hotel, food, & travel)</p>
+  </section>
+
+  <section>
+    <h2>🗺️ Map</h2>
+    <iframe src="https://www.google.com/maps?q=manali+himachal+pradesh&output=embed" height="300"></iframe>
+  </section>
+
+  <section>
+    <h2>🎥 Travel Video</h2>
+    <video controls>
+      <source src="../media/videos/manali.mp4" type="video/mp4" />
+    </video>
+  </section>
+  <!-- Hotels & Packages Section -->
+  <section class="hotels-packages">
+    <h2>🏨 Recommended Hotels in Manali</h2>
+    <div class="hotel-cards">
+      <div class="hotel-card">
+        <img src="../media/images/hotel_snowvalley.jpg" alt="Snow Valley Resort">
+        <h3>Snow Valley Resort</h3>
+        <p>Starting at ₹2,500/night</p>
+        <button onclick="bookHotel('Snow Valley Resort')">Book Room</button>
+      </div>
+      <div class="hotel-card">
+        <img src="../media/images/hotel_manjushree.jpg" alt="Manjushree Inn">
+        <h3>Manjushree Inn</h3>
+        <p>Starting at ₹1,800/night</p>
+        <button onclick="bookHotel('Manjushree Inn')">Book Room</button>
+      </div>
+    </div>
+
+    <h2>📦 Popular Packages</h2>
+    <div class="package-cards">
+      <div class="package-card">
+        <h3>3D/2N Budget Manali Getaway</h3>
+        <ul>
+          <li>✔️ 2-night stay</li>
+          <li>✔️ Sightseeing + Transfers</li>
+          <li>✔️ Free Breakfast</li>
+        </ul>
+        <p>₹4,999 per person</p>
+        <button onclick="bookPackage('Budget Manali Getaway')">Book Package</button>
+      </div>
+      <div class="package-card">
+        <h3>5D/4N Luxury Snow Escape</h3>
+        <ul>
+          <li>✔️ 4-star hotel</li>
+          <li>✔️ Cab & Local Guide</li>
+          <li>✔️ Adventure Activities</li>
+        </ul>
+        <p>₹9,999 per person</p>
+        <button onclick="bookPackage('Luxury Snow Escape')">Book Package</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function bookHotel(name) {
+      alert(`✅ Hotel Booked: ${name}\nThank you for choosing TravelingBird!`);
+    }
+
+    function bookPackage(name) {
+      alert(`✅ Package Booked: ${name}\nHappy exploring with TravelingBird!`);
+    }
+  </script>
+
+  <section class="booking-form">
+    <h2>📝 Book This Trip</h2>
+    <form onsubmit="bookTrip(event)">
+      <input type="hidden" id="destination" value="Manali" />
+      <label>Travel Date:</label>
+      <input type="date" id="date" required />
+      <label>Number of People:</label>
+      <input type="number" id="numPeople" min="1" required />
+      <button type="submit">Pay & Book</button>
+    </form>
+  </section>
+
+</section>
+
+</main>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

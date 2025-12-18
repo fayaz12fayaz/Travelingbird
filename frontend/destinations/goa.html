@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Goa - TravelingBird</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background:
+        linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+        url('https://www.toptal.com/designers/subtlepatterns/patterns/doodles.png');
+      background-size: 300px;
+      background-attachment: fixed;
+    }
+    nav {
+      background: #0077b6;
+      display: flex;
+      gap: 2rem;
+      padding: 1rem;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a.active {
+      background: white;
+      color: #0077b6;
+      padding: 0.3rem 0.7rem;
+      border-radius: 5px;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    video, iframe, img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .booking-form input, .booking-form button {
+      display: block;
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.7rem;
+      font-size: 1rem;
+    }
+    .booking-form button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .booking-form button:hover {
+      background: #005f8e;
+    }
+  </style>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="../js/script.js"></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="../destinations.html" class="active">Destinations</a>
+  <a href="../map.html">Map</a>
+  <a href="../planner.html">Planner</a>
+  <a href="../dashboard.html">Dashboard</a>
+  <a href="../signup.html">Login / Signup</a>
+</nav>
+
+<main>
+  <h1>🏖️ Goa – Sun, Sand & Parties</h1>
+  <img src="../media/images/goa.jpg" alt="Goa Beach" />
+
+  <section>
+    <h2>🌟 Must-Visit Spots</h2>
+    <ul>
+      <li>🌊 Baga, Anjuna & Palolem Beaches – water sports & sunsets</li>
+      <li>⛪ Old Goa – churches & Portuguese architecture</li>
+      <li>🎉 Tito’s Lane – nightlife & beach shacks</li>
+      <li>🏰 Aguada & Chapora Forts – scenic viewpoints</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🎯 Top Activities</h2>
+    <ul>
+      <li>🏄‍♂️ Parasailing, Jet skiing, Banana boat rides</li>
+      <li>🍻 Beachside clubs & silent discos</li>
+      <li>🚤 Island hopping & Dolphin spotting tours</li>
+      <li>🛍️ Street shopping at Anjuna flea market</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🗓️ Best Time to Visit</h2>
+    <p>November to March (for beach season and festivals)</p>
+  </section>
+
+  <section>
+    <h2>🏨 Recommended Hotels</h2>
+    <ul>
+      <li>🌟 Taj Exotica – luxury on Benaulim beach</li>
+      <li>🏖️ Estrela Do Mar – near Baga Beach</li>
+      <li>🛏️ Lazy Lagoon Sarovar Portico – calm, beautiful view</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🍛 Food to Try</h2>
+    <ul>
+      <li>🍤 Goan Prawn Curry</li>
+      <li>🥥 Bebinca (Goan dessert)</li>
+      <li>🐟 Kingfish Fry & Xacuti</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>💰 Budget Estimate</h2>
+    <p>₹10,000 – ₹14,000 per person for 3-day trip</p>
+  </section>
+
+  <section>
+    <h2>🗺️ Location Map</h2>
+    <iframe src="https://www.google.com/maps?q=goa+india&output=embed" height="300"></iframe>
+  </section>
+
+  <section>
+    <h2>🎥 Travel Vibes</h2>
+    <video controls>
+      <source src="../media/videos/goa.mp4" type="video/mp4" />
+    </video>
+  </section>
+ <!-- Hotels & Packages Section -->
+  <section class="hotels-packages">
+    <h2>🏨 Recommended Hotels in Goa</h2>
+    <div class="hotel-cards">
+      <div class="hotel-card">
+        <img src="../media/images/hotel_seaview.jpg" alt="Sea View Resort">
+        <h3>Sea View Resort</h3>
+        <p>Starting at ₹2,200/night</p>
+        <button onclick="bookHotel('Sea View Resort')">Book Room</button>
+      </div>
+      <div class="hotel-card">
+        <img src="../media/images/hotel_beachwood.jpg" alt="Beachwood Stay">
+        <h3>Beachwood Stay</h3>
+        <p>Starting at ₹1,600/night</p>
+        <button onclick="bookHotel('Beachwood Stay')">Book Room</button>
+      </div>
+    </div>
+
+    <h2>📦 Popular Packages</h2>
+    <div class="package-cards">
+      <div class="package-card">
+        <h3>4D/3N Beach Explorer</h3>
+        <ul>
+          <li>✔️ Beach hotel stay</li>
+          <li>✔️ North & South Goa tour</li>
+          <li>✔️ Free breakfast + nightlife guide</li>
+        </ul>
+        <p>₹6,499 per person</p>
+        <button onclick="bookPackage('Beach Explorer')">Book Package</button>
+      </div>
+      <div class="package-card">
+        <h3>Luxury Sunset Retreat – 5D/4N</h3>
+        <ul>
+          <li>✔️ 4-star beachside hotel</li>
+          <li>✔️ Cruise + Water sports</li>
+          <li>✔️ All meals included</li>
+        </ul>
+        <p>₹11,999 per person</p>
+        <button onclick="bookPackage('Luxury Sunset Retreat')">Book Package</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function bookHotel(name) {
+      alert(`✅ Hotel Booked: ${name}\nThank you for choosing TravelingBird!`);
+    }
+
+    function bookPackage(name) {
+      alert(`✅ Package Booked: ${name}\nHappy exploring with TravelingBird!`);
+    }
+  </script>
+  <section class="booking-form">
+    <h2>📝 Book This Trip</h2>
+    <form onsubmit="bookTrip(event)">
+      <input type="hidden" id="destination" value="Goa" />
+      <label>Travel Date:</label>
+      <input type="date" id="date" required />
+      <label>Number of People:</label>
+      <input type="number" id="numPeople" min="1" required />
+      <button type="submit">Pay & Book</button>
+    </form>
+  </section>
+</main>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
