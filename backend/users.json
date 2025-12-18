@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Aarav Mehta",
+    "email": "aarav@example.com",
+    "password": "$2a$10$exampleHashedPassword1",
+    "createdAt": "2025-07-01T10:20:00.000Z"
+  },
+  {
+    "name": "Isha Kapoor",
+    "email": "isha@example.com",
+    "password": "$2a$10$exampleHashedPassword2",
+    "createdAt": "2025-07-02T09:45:00.000Z"
+  },
+  {
+    "name": "Kunal Sharma",
+    "email": "kunal@example.com",
+    "password": "$2a$10$exampleHashedPassword3",
+    "createdAt": "2025-07-03T15:30:00.000Z"
+  },
+  {
+    "name": "Priya Nair",
+    "email": "priya@example.com",
+    "password": "$2a$10$exampleHashedPassword4",
+    "createdAt": "2025-07-04T12:15:00.000Z"
+  },
+  {
+    "name": "Rohit Desai",
+    "email": "rohit@example.com",
+    "password": "$2a$10$exampleHashedPassword5",
+    "createdAt": "2025-07-05T18:50:00.000Z"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Aarav Mehta",
+    "email": "aarav@example.com",
+    "type": "hotel",
+    "item": "Snow Valley Resort, Manali",
+    "price": 2500,
+    "date": "2025-07-01T14:30:00.000Z"
+  },
+  {
+    "name": "Isha Kapoor",
+    "email": "isha@example.com",
+    "type": "package",
+    "item": "5D/4N Kerala Nature Retreat",
+    "price": 9999,
+    "date": "2025-07-03T11:00:00.000Z"
+  },
+  {
+    "name": "Kunal Sharma",
+    "email": "kunal@example.com",
+    "type": "hotel",
+    "item": "Ooty Hillside Lodge",
+    "price": 2000,
+    "date": "2025-07-04T17:20:00.000Z"
+  },
+  {
+    "name": "Priya Nair",
+    "email": "priya@example.com",
+    "type": "package",
+    "item": "3D/2N Rishikesh Adventure Tour",
+    "price": 4999,
+    "date": "2025-07-05T09:00:00.000Z"
+  },
+  {
+    "name": "Rohit Desai",
+    "email": "rohit@example.com",
+    "type": "hotel",
+    "item": "Leh Mountain Stay",
+    "price": 3200,
+    "date": "2025-07-06T15:45:00.000Z"
+  }
+]
