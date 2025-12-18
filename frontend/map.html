@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Map View - TravelingBrid</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .map-container {
+      width: 100%;
+      height: 80vh;
+      margin: 2rem auto;
+      max-width: 1000px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    h1 {
+      text-align: center;
+      margin-top: 2rem;
+      color: #0077b6;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="destinations.html">Destinations</a>
+  <a href="map.html" class="active">Map</a>
+  <a href="planner.html">Planner</a>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="signup.html">Signup</a>
+</nav>
+
+<!-- Page Title -->
+<h1>🗺️ Explore All Destinations on the Map</h1>
+
+<!-- Google Map Embed -->
+<div class="map-container">
+  <iframe 
+    src="https://www.google.com/maps/d/embed?mid=1Cj4CYJt180qVP4_MYbpxYvbVTG3WnfA&ehbc=2E312F"
+    width="100%" 
+    height="100%" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+<footer>
+  <p>© 2025 TravelingBrid | Built with ❤️ + 🗺️</p>
+</footer>
+
+</body>
+</html>
